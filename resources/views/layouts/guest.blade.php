@@ -36,15 +36,28 @@
             <div :class="isOpen ? 'flex' : 'hidden'"
                  class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                   href="/">Home</a>
+                   href="/">Naslovna</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                   href="#">About Us</a>
+                   href="{{ route('events.index') }}">Događaji</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                   href="{{ route('events.index') }}">Events</a>
+                   href="{{ route('menus.index') }}">Cjenovnik</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                   href="{{ route('menus.index') }}">Drinks</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                   href="{{ route('reservations.step.one') }}">Make Reservation</a>
+                   href="{{ route('reservations.step.one') }}">Rezerviraj</a>
+
+                @if (Route::has('login'))
+
+                        @auth
+                            <a href="{{ url('/') }}" class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"></a>
+                        @else
+                            <a href="{{ route('login') }}" class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400">Log in</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+
 
             </div>
         </nav>
@@ -57,10 +70,9 @@
             <div class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between">
                 <div class="flex flex-wrap justify-center">
                     <ul class="flex items-center space-x-4 text-white">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                        <li>Terms</li>
+                        <li>Radno vrijeme: 21:00-03:00 </li>
+                        <li>Kontakt: +387 76 678 899</li>
+                        <li>E-mail: lumi@gmail.com</li>
                     </ul>
                 </div>
                 <div class="flex justify-center mt-4 lg:mt-0">

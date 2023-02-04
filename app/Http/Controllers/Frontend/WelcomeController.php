@@ -13,4 +13,8 @@ class WelcomeController extends Controller
         $events = Event::all();
         return view('welcome', compact('events'));
     }
+    public function thankyou()
+    {
+        return view('thankyou');
+    }
 }

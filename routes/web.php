@@ -39,7 +39,10 @@ Route::get('/events/{event}', [FrontendEventController::class,'show'])->name('ev
 Route::get('/menus', [FrontendMenuController::class,'index'])->name('menus.index');
 Route::get('/menus/{menu}', [FrontendMenuController::class,'show'])->name('menus.show');
 Route::get('/reservation/step-one', [FrontendReservationController::class,'stepOne'])->name('reservations.step.one');
+Route::post('/reservation/step-one', [FrontendReservationController::class,'storeStepOne'])->name('reservations.store.step.one');
 Route::get('/reservation/step-two', [FrontendReservationController::class,'stepTwo'])->name('reservations.step.two');
+Route::post('/reservation/step-two', [FrontendReservationController::class,'storeStepTwo'])->name('reservations.store.step.two');
+Route::get('/thankyou', [WelcomeController::class, 'thankyou'])->name('thankyou');
 
 
 
