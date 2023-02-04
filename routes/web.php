@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-URL::forceRootUrl('http://studenti.sum.ba/projekti/rwa/2022/g3');
+//URL::forceRootUrl('http://studenti.sum.ba/projekti/rwa/2022/g3');
 
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/events', [FrontendEventController::class,'index'])->name('events.index');
