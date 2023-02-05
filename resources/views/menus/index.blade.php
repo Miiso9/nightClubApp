@@ -10,7 +10,7 @@
                             <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 hover:text-green-400 uppercase">
                                 {{ $menu->name }}</h4>
                         </a>
-                    <span class="text-xl text-green-600">$ {{ $menu->price }}</span>
+                    <span class="text-xl text-green-600"> {{ $menu->price }} KM </span>
                     </div>
 
                 </div>
