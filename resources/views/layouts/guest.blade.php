@@ -40,7 +40,7 @@
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
                    href="{{ route('events.index') }}">Događaji</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                   href="{{ route('menus.index') }}">Cijenovnik</a>
+                   href="{{ route('menus.index') }}">Cjenovnik</a>
                 @role('User')
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
                    href="{{ route('reservations.step.one') }}">Rezerviraj</a>

@@ -50,7 +50,7 @@
     <section class="pt-4 pb-12 bg-slate-800">
         <div class="mt-4 text-center">
             <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                CIJENOVNIK</h2>
+                CJENOVNIK</h2>
         </div>
         <div class="container w-full px-5 py-6 mx-auto">
             <div class="grid lg:grid-cols-4 gap-y-6">
