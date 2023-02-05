@@ -76,6 +76,7 @@
                         <x-admin-nav-link :href="route('admin.reservations.index')" :active="request()->routeIs('admin.reservations.index')">
                             {{ __('Reservations') }}
                         </x-admin-nav-link>
+                        @role('admin')
                         <x-admin-nav-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
                             {{ __('Roles') }}
                         </x-admin-nav-link>
@@ -84,6 +85,10 @@
                         </x-admin-nav-link>
                         <x-admin-nav-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.index')">
                             {{ __('Users') }}
+                        </x-admin-nav-link>
+                        @endrole
+                        <x-admin-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
                         </x-admin-nav-link>
 
 

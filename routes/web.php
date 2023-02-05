@@ -46,7 +46,12 @@ Route::post('/reservation/step-two', [FrontendReservationController::class,'stor
 Route::get('/thankyou', [WelcomeController::class, 'thankyou'])->name('thankyou');
 
 
-
+Route::middleware(['auth', 'role:user'])->name('reservations.')->prefix('admin')->group(function(){
+    Route::get('/reservation/step-one', [FrontendReservationController::class,'stepOne'])->name('reservations.step.one');
+    Route::post('/reservation/step-one', [FrontendReservationController::class,'storeStepOne'])->name('reservations.store.step.one');
+    Route::get('/reservation/step-two', [FrontendReservationController::class,'stepTwo'])->name('reservations.step.two');
+    Route::post('/reservation/step-two', [FrontendReservationController::class,'storeStepTwo'])->name('reservations.store.step.two');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -74,6 +79,16 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
 
 
 });
+Route::middleware(['auth', 'role:Moderator'])->name('admin.')->prefix('admin')->group(function(){
+    Route::get('/', [IndexController::class, 'index'])->name('index');
+    Route::resource('/events', EventController::class);
+    Route::resource('/menus', MenuController::class);
+    Route::resource('/tables', TableController::class);
+    Route::resource('/reservations', ReservationController::class);
+
+
+});
+
 
 
 Route::middleware('auth')->group(function () {

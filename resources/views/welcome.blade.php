@@ -2,14 +2,15 @@
     <!-- Main Hero Content -->
     <div
         class="container max-w-lg px-4 py-32 mx-auto text-left bg-center bg-no-repeat bg-cover md:max-w-none md:text-center"
-        style="background-image: url(https://cdn.pixabay.com/photo/2019/09/07/12/29/club-4458691_960_720.jpg)">
+        style="background-image: url(https://cdn.pixabay.com/photo/2020/07/07/16/28/audio-5381049_960_720.jpg)">
         <h1
             class="font-mono text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-center sm:leading-none lg:text-5xl">
             <span class="inline md:block">Dobrodošli u Lumi NightClub</span>
         </h1>
         <div class="mx-auto mt-2 text-green-50 md:text-center lg:text-lg">
-            Napravite rezervaciju za određeni događaj, povedite ekipu i uživajte
+            Napravi račun, rezerviši stol i pozovi ekipu za najbolji provod u gradu!
         </div>
+        @role('User')
         <div class="flex flex-col items-center mt-12 text-center">
         <button class=" animate-bounce relative inline-flex w-full md:w-auto">
           <a href="{{ route('reservations.step.one') }}" type="button"
@@ -18,7 +19,10 @@
           </a>
         </button>
         </div>
+        @endrole
+
     </div>
+
     <!-- End Main Hero Content -->
     <section class="px-2 py-32 bg-slate-900 md:px-0">
         <div class="mt-4 text-center">
@@ -32,8 +36,10 @@
                         <img class="w-full h-48" src="{{ Storage::url($event->image) }}"
                              alt="Image" />
                         <div class="px-6 py-4">
-                            <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">{{ $event->name }}</h4>
-                            <p class="leading-normal text-gray-500">{{$event->description}}.</p>
+                            <a href="{{ route('events.show', $event->id) }}">
+                                <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 hover:text-green-400 uppercase">
+                                    {{ $event->name }}</h4>
+                            </a>
                         </div>
                     </div>
                 @endforeach
@@ -41,7 +47,32 @@
         </div>
     </section>
 
-    <section class="py-20 px-20 bg-slate-800">
+    <section class="pt-4 pb-12 bg-slate-800">
+        <div class="mt-4 text-center">
+            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                CIJENOVNIK</h2>
+        </div>
+        <div class="container w-full px-5 py-6 mx-auto">
+            <div class="grid lg:grid-cols-4 gap-y-6">
+                @foreach($menus as $menu)
+                    <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
+                        <img class="w-full h-54" src="{{ Storage::url($menu->image) }}"
+                             alt="Image" />
+                        <div class="px-6 py-4">
+                            <a href="{{ route('menus.show', $menu->id) }}">
+                                <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 hover:text-green-400 uppercase">
+                                    {{ $menu->name }}</h4>
+                            </a>
+                            <span class="text-xl text-green-600">$ {{ $menu->price }}</span>
+                        </div>
+
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-20 bg-slate-900">
         <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
             <div class="flex flex-wrap items-center -mx-3">
                 <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
@@ -65,7 +96,7 @@
 
         </div>
     </section>
-    <section class="py-20 px-20 bg-slate-800">
+    <section class="py-20 px-20 bg-slate-900">
         <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
             <div class="flex flex-wrap items-center -mx-3">
                 <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
@@ -86,7 +117,7 @@
 
         </div>
     </section>
-    <section class="px-2 py-32 bg-slate-900 md:px-0">
+    <section class="px-2 py-32 bg-slate-800 md:px-0">
         <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
             <div class="flex flex-wrap items-center sm:-mx-3">
                 <div class="w-full md:w-1/2 md:px-3">
@@ -94,10 +125,10 @@
                         <!-- <h1
                         class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
                       > -->
-                        <h2 class="text-4xl text-green-600">NOĆNI KLUB INFO</h2>
+                        <h2 class="text-4xl text-green-600">POVIJEST</h2>
                         <!-- </h1> -->
                         <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                            Dobrodošli na stranicu poznatog noćnog kluba Lumi. Nudimo nezaboravne žurke uz odličnu ponudu alkohola i muziku. Zaboravi na sve rezerviraj stol i pozovi društvo.
+                            Nudimo nezaboravne žurke uz odličnu ponudu alkohola i muziku. Zaboravi na sve rezerviraj stol i pozovi društvo.
                             Osnivači kluba su Luka Lasić i Mihael Marić po čemu je klub i dobio ime LU(uka) MI(hael). Također prepoznatljivi smo kao jedan od najboljih noćnih klubova u regionu.
                         </p>
 
