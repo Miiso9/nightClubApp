@@ -247,7 +247,7 @@
                         <!-- </h1> -->
                         <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
                             Nudimo nezaboravne žurke uz odličnu ponudu alkohola i muziku. Zaboravi na sve rezerviraj stol i pozovi društvo.
-                            Osnivači kluba su Luka Lasić i Mihael Marić po čemu je klub i dobio ime LU(uka) MI(hael). Također prepoznatljivi smo kao jedan od najboljih noćnih klubova u regionu.
+                            Osnivači kluba su Luka Lasić i Mihael Marić po čemu je klub i dobio ime LU(uka) MI(hael).
 
                         </p>
                         <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
