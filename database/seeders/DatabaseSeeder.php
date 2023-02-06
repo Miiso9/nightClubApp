@@ -25,5 +25,17 @@ class DatabaseSeeder extends Seeder
 
         $this->call(EventsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
+        $this->call(FailedJobsTableSeeder::class);
+        $this->call(MenusTableSeeder::class);
+        $this->call(MigrationsTableSeeder::class);
+        $this->call(ModelHasPermissionsTableSeeder::class);
+        $this->call(ModelHasRolesTableSeeder::class);
+        $this->call(PasswordResetsTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(PersonalAccessTokensTableSeeder::class);
+        $this->call(ReservationsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(RoleHasPermissionsTableSeeder::class);
+        $this->call(TablesTableSeeder::class);
     }
 }
