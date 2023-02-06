@@ -125,7 +125,7 @@
                     </ul>
                 </div>
                 <!-- Pricing Card -->
-                <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg- rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                     <h3 class="mb-4 text-2xl font-semibold">Koncert</h3>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">VIP backstage</p>
                     <div class="flex justify-center items-baseline my-8">
@@ -243,14 +243,20 @@
                         <!-- <h1
                         class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
                       > -->
-                        <h2 class="text-4xl text-green-600">O KLUBU</h2>
+                        <h2 class="text-4xl text-green-600">O KLUBU I VIZIJA</h2>
                         <!-- </h1> -->
                         <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
                             Nudimo nezaboravne žurke uz odličnu ponudu alkohola i muziku. Zaboravi na sve rezerviraj stol i pozovi društvo.
                             Osnivači kluba su Luka Lasić i Mihael Marić po čemu je klub i dobio ime LU(uka) MI(hael). Također prepoznatljivi smo kao jedan od najboljih noćnih klubova u regionu.
-                        </p>
 
+                        </p>
+                        <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                            Viziju projekta možete pronaći klikom ispod:
+                        </p>
                     </div>
+                    <button class="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
+                        <a href="https://docs.google.com/document/d/18uKFBaU9KM9v1In3DYmTPKHztL8D88_H/edit?usp=sharing&ouid=116180029739140699933&rtpof=true&sd=true" type="button">Vizija.docx</a>
+                    </button>
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
