@@ -11,7 +11,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
+                    <x-nav-link class="text-transparent bg-clip-text "
                                 href="/"> Home Page
                     </x-nav-link>
                     @role('Moderator')
